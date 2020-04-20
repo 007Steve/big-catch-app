@@ -1,0 +1,3 @@
+class BigCatchesController < ApplicationController
+    
+end

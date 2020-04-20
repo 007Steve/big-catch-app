@@ -6,6 +6,6 @@ end
 
 use Rack::MethodOverride
 
-
+use BigCatchesController
 use UsersController
 run ApplicationController
