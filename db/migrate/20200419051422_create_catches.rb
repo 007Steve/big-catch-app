@@ -1,4 +1,4 @@
-class CreateCatches < ActiveRecord::Migration
+class CreateCatch < ActiveRecord::Migration
   def change
     create_table :catches do |t|
       t.string :name

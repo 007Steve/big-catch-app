@@ -3,11 +3,11 @@ new for create you catch
 name 
 type
 length
-<form action="/BigCatches" method="post"> 
+<form action="/Catches" method="POST"> 
 <label>Name</label>
 <input type="text" name="name" value="">
-<label>Type</label>
-<input type="text" name="type" value="">
+<label>Image</label>
+<input type="text" name="image" value="">
 <label>Length</label>
 <input type="integer" name="length" value="">
 <label>Weight</label>
@@ -17,9 +17,3 @@ length
 </form>
 
 
-t.string :name
-      t.string :type
-      t.integer :length
-      t.integer :weight 
-      t.integer :user_id
-      t.timestamps null: false

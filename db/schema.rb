@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200419051422) do
+ActiveRecord::Schema.define(version: 20200421164907) do
 
   create_table "catches", force: :cascade do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "image"
     t.integer  "length"
     t.integer  "weight"
     t.integer  "user_id"
