@@ -1,1 +1,11 @@
 index
+<% @catches.each do |catch|%>
+ <h4><%= catch.name%> </h4>
+<%= catch.image%>
+<br><br>
+<h6><%= catch.length%></h6>
+<br><br>
+<h6><%= catch.weight%></h6>
+<br><br>
+
+<% end %>
