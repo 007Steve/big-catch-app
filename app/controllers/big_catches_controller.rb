@@ -27,8 +27,7 @@ class CatchesController < ApplicationController
 
 #show created catch
  get "/Catches/:id" do
-        
-      @catch = Catch.find(params[:id])
+    @catch = Catch.find(params[:id])
       erb :"/Catches/show"
      end
         
@@ -44,11 +43,43 @@ class CatchesController < ApplicationController
 
 # show edit form
      get '/catches/:id/edit' do
-       erb :'/catches/edit'
-      end
+       
+        @catch = Catch.find(params[:id])
+         if logged_in?
+            if @catch.user == current_user
+              erb :'/catches/edit'
+       else
+        # doesnt redirect
+           redirect "user/#{current_user.id}"
+        end
+        else
+            redirect '/'
+        end
+     end
+
      
 
+#     
+      patch '/catches/:id' do
+        @catch = Catch.find(params[:id])
+        #fix it
+        if logged_in?
+          if @catch.user == current_user
+              params.delete("_method")
+              @catch.update(name: params[:name],image: params[:image],length: params[:length], weight: params[:weight])
+      
+              redirect "/Catches/#{@catch.id}" 
+         else
+               redirect "user/#{current_user.id}"
+             end
+            else
+               redirect '/'
+        end
+    end
 
+
+
+    
 
  end
-    
+
