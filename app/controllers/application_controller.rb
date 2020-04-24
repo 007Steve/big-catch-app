@@ -7,7 +7,10 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
     enable :sessions 
     set :sessions_secret, "bca"
+    set :method_override, true
   end
+  
+         
 
   get "/" do
     if logged_in?

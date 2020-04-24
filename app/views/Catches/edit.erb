@@ -1,6 +1,6 @@
-edit form
+<h1>Edit Catch</h1>
 
-<form action="/catches/<%=@catch.id%>" method="post"> 
+<form  method="post" action="/catches/<%=@catch.id%>"> 
 <input type="hidden" name="_method" value="patch">
 <label>Name</label>
 <input type="text" name="name" value="<%=@catch.name%>">

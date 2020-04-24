@@ -1,13 +1,17 @@
-show page for big catches
-#add the rest of the create attributes
-<p><%=@catch.name %></p>
-<p><%=@catch.image %></p>
+
+<h1> Big Catch</h1>
+<p><%=@catch.name %> </p>
+<img src="<%= @catch.image%>" alt="picture of a fish">
 <p><%=@catch.length %></p>
 <p><%=@catch.weight %></p>
 
 
-#edit
+
 
 <a href="/catches/<%=@catch.id%>/edit ">Edit Catch</a>
 
-<a href="/catches/<%=@catch.id%>/edit ">Delete</a>
+
+<form method="post" action="/catches/<%=@catch.id%>" >
+<input type="hidden" name="_method" value="delete">
+<input type="submit"  value="Delete this Catch">
+ </form>

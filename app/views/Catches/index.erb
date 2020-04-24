@@ -1,11 +1,19 @@
-index
+
+
+<h1> Big Catches</h1>
+
+<a href="users/:id">Home</a>
+<br></br>
+<a href="/logout">Log Out</a>
+<br></br>
+<a href="/catches/new"> Create  a new Big Catch</a>
 <% @catches.each do |catch|%>
- <h4><%= catch.name%> </h4>
-<%= catch.image%>
+ <h4>Type of fish : <a href="/catches/<%= catch.id%>"> <%= catch.name%> </a></h4>
+<img src="<%= catch.image%>" alt="picture of a fish">
 <br><br>
-<h6><%= catch.length%></h6>
+<h6>Length :  <%= catch.length%> Inches</h6>
 <br><br>
-<h6><%= catch.weight%></h6>
-<br><br>
+<h6>Weight :  <%= catch.weight%> Pounds</h6>
+<a href='/catches/<%=catch.id%>/edit' >Edit</a>
 
 <% end %>
