@@ -1,0 +1,63 @@
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(font/LostFish-5DOz.ttf);
+    
+  }
+  
+
+
+
+body{
+color: #024CDD;
+}
+.video-container video {
+	min-width: 100%;
+	min-height: 100%;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+.login {
+   
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    border: solid #fff 1px;
+    margin-top: 25px;
+    opacity: 0.7;
+    
+}
+
+
+h1 {
+    font-family: myFirstFont;
+    color: rgb(255, 0, 0)
+}
+
+.intro {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    
+    display: table;
+    background-size:cover ;
+    }
+
+    .signup {
+        
+            display: inline-block;
+            padding: 10px 30px;
+            background: var(--primary-color);
+            color: #fff;
+            border-radius: 5px;
+            border: solid #fff 1px;
+            margin-top: 25px;
+            opacity: 0.7;
+    
+    }
+

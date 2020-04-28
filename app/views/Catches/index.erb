@@ -1,12 +1,5 @@
-
-
 <h1> Big Catches</h1>
 
-<a href="users/:id">Home</a>
-<br></br>
-<a href="/logout">Log Out</a>
-<br></br>
-<a href="/catches/new"> Create  a new Big Catch</a>
 <% @catches.each do |catch|%>
  <h4>Type of fish : <a href="/catches/<%= catch.id%>"> <%= catch.name%> </a></h4>
 <img src="<%= catch.image%>" alt="picture of a fish">
